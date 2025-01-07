@@ -14,6 +14,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link active" aria-current="page" href="/product">Products</a>
+                        </li>
                     </ul>
                     <form className="d-flex" role="search" id="cart-detail-orders-view">
                         <a href="/cart.html">
