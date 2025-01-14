@@ -1,5 +1,12 @@
+import { useSelector } from "react-redux"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+    const { cart } = useSelector(root => root);
+
+    let cartInit = 0;
+    cart?.forEach((element) => (cartInit += element.stock));
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -19,10 +26,10 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <form className="d-flex" role="search" id="cart-detail-orders-view">
-                        <a href="/cart.html">
+                        <Link to="/">
                             <i className="fa-solid fa-cart-shopping"></i>
-                            <span className="badge text-bg-primary" id="cart"></span>
-                        </a>
+                            <span className="badge text-bg-primary" >{cartInit}</span>
+                        </Link>
                     </form>
                 </div>
             </div>
