@@ -1,7 +1,11 @@
-const formatRupiah = (value) => {
-    return `Rp ${new Intl.NumberFormat('id-ID', { minimumFractionDigits: 0 }).format(value)}`
-}
+const rupiahFormat = (value) => (new Intl.NumberFormat('id-ID', {
+    style : 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0
+}).format(value, 0));
+  
+
 
 export {
-    formatRupiah
+    rupiahFormat
 }

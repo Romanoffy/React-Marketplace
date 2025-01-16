@@ -2,33 +2,33 @@ import { createSlice } from "@reduxjs/toolkit";
 import { productOne, productThree, productTwo } from "../assets";
 
 export const productSlice = createSlice({
-    name: "cart",
+    name: "product",
     initialState: [
         {
             id: 1,
-            products_name: 'Shoes Office',
+            products_name: 'Nike Air Max SNDR',
             type: 'man shoes',
             description: 'this man shoes brooo',
             stock: 10,
-            price: 250000,
+            price: 2849000,
             img_url: productOne
         },
         {
             id: 2,
-            products_name: 'Shoes Sport',
-            type: 'man shoes',
-            description: 'this man shoes Sport brooo',
+            products_name: 'Nike Air Max 90',
+            type: 'unisex shoes',
+            description: 'Costum Man s Shoes',
             stock: 10,
-            price: 350000,
+            price: 2489000,
             img_url: productTwo
         },
         {
             id: 3,
-            products_name: 'Shoes Boats',
-            type: 'women shoes',
+            products_name: 'Nike V2K Run',
+            type: 'man shoes',
             description: 'this women shoes brooo',
             stock: 10,
-            price: 2500000,
+            price: 1909000,
             img_url: productThree
         },
     ],

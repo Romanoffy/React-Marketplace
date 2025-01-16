@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">Shoes Store</a>
+                <a className="navbar-brand" href="/"> | MARKETPLACE PPLG 2 |</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,8 +27,8 @@ const Navbar = () => {
                     </ul>
                     <form className="d-flex" role="search" id="cart-detail-orders-view">
                         <Link to="/">
-                            <i className="fa-solid fa-cart-shopping"></i>
-                            <span className="badge text-bg-primary" >{cartInit}</span>
+                            <i className="fa-solid fa-cart-shopping" style={{ color: 'black' }}> {cartInit}</i>
+                           
                         </Link>
                     </form>
                 </div>
