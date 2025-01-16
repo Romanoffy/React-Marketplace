@@ -16,13 +16,14 @@ export const cartSlice = createSlice({
                 return;
             }
 
-            state.map((product) => {
-                if (product.id === payload?.payload.id) {
-                    product.stock += 1;
+          if (findProduct) {
+            state.map(product => {
+                if(product.id === payload.payload){
+                    product.qty += 1
                 }
-            });
+            })}
 
-        },
+        }
     }
 })
 
