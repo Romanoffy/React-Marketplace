@@ -6,7 +6,7 @@ const Cart = () => {
     const {cart} = useSelector((root) => root)
     return (
         <>
-           
+          
            <div className="container">
             <div className="p-4">
                 {
@@ -16,8 +16,9 @@ const Cart = () => {
                     </div>
                     <div className="card-body">
                         <div className="row">
+                           
                             <div className="col-2">
-                                <img src={p?.img_url} alt={p?.product_image} className="card-img-top" />
+                                <img src={p?.img_url} alt={p?.img_url} className="card-img-top" />
                             </div>
                             <div className="col-6">
                                 <p className="card-text">Qty: {p?.stock}</p>
@@ -30,8 +31,24 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
+                    {
+                        index == cart.length - 1 ? <div className="card-footer">
+                        <div className="row">
+                            <div className="col-6">
+                                <button className="btn btn-success">Checkout</button>
+                            </div>
+                            <div className="col-6">
+                                <p className="card-text">
+                                    Payment: {
+                                    rupiahFormat(cart.reduce((acc, curr) => acc + (curr.price * curr.stock), 0))
+                                    }
+                                </p>
+                            </div>
+                            </div>
+                        </div> : null
+                }
                 </div>
-                            )
+                 )
                 } 
             </div>
            </div>
